@@ -15,15 +15,74 @@ export const NAV = [
 ]
 export const TICKER = ['Prior registration', 'Physical ID required', 'Traditional attire', 'Bring your dandiya sticks', 'Handbags only', 'No cars on campus', 'No smoking or alcohol', 'Contact the core team']
 
-// tone: ink | sun | burnt | bone     icon: any lucide-react icon name registered in GuidelinePanel
+// accent: sun | burnt     icon: any lucide-react icon name registered in tones.js
 export const GUIDELINES = [
-  { title: 'Prior registration required', text: 'All participants must register in advance to attend the event.', icon: 'ClipboardCheck', tone: 'ink' },
-  { title: 'No entry without ID and confirmation', text: 'Show a valid physical college ID card and your registration confirmation at the gate. Without both, you can’t enter the celebration area.', icon: 'IdCard', tone: 'sun' },
-  { title: 'Traditional attire only', text: 'Wear clothing that fits the occasion and honors the cultural importance of Garba. Bring your own dandiya sticks.', icon: 'Shirt', tone: 'burnt' },
-  { title: 'Separate spaces', text: 'Separate space is allotted for girls and boys during the event.', icon: 'Users', tone: 'bone' },
-  { title: 'Handbags only', text: 'No other bags are allowed, for the safety and security of all participants. Plan accordingly.', icon: 'ShoppingBag', tone: 'sun' },
-  { title: 'No cars', text: 'Personal cars aren’t allowed on college premises during the event. Use public transport or carpool.', icon: 'CarFront', tone: 'ink' },
-  { title: 'No smoking or alcohol', text: 'Both are strictly prohibited on college premises. Anyone found engaging will be suspended from the event immediately.', icon: 'CigaretteOff', tone: 'burnt' },
+  {
+    title: 'Prior Registration Required',
+    text: 'All participants must register in advance to attend the event.',
+    points: [
+      'Registration must be completed in advance before arriving at campus.',
+      'Entry is strictly restricted to participants with confirmed registrations.',
+      'On-spot registrations will not be entertained at the gate.',
+    ],
+    icon: 'ClipboardCheck',
+    accent: 'sun',
+  },
+  {
+    title: 'No Entry Without ID & Confirmation',
+    text: 'Show a valid physical college ID card and your registration confirmation at the gate. Without both, you can’t enter the celebration area.',
+    points: [
+      'A valid physical college ID card is mandatory at the entrance.',
+      'Registration confirmation pass must be presented at the gate.',
+      'Entry will not be granted without both documents verified.',
+    ],
+    icon: 'IdCard',
+    accent: 'burnt',
+  },
+  {
+    title: 'Traditional Attire Only',
+    text: 'Wear clothing that fits the occasion and honors the cultural importance of Garba. Bring your own dandiya sticks.',
+    points: [
+      'Ethnic / traditional Indian wear is required to honor Garba culture.',
+      'Casual or Western clothing will not be permitted in the dance arena.',
+      'Participants must bring their own dandiya sticks to dance.',
+    ],
+    icon: 'Shirt',
+    accent: 'sun',
+  },
+  {
+    title: 'Handbags Only',
+    text: 'No other bags are allowed, for the safety and security of all participants. Plan accordingly.',
+    points: [
+      'Only small personal handbags / clutches are allowed inside.',
+      'Backpacks, large bags, and luggage are strictly prohibited.',
+      'Mandatory security screening will be conducted at entry gates.',
+    ],
+    icon: 'ShoppingBag',
+    accent: 'burnt',
+  },
+  {
+    title: 'No Personal Cars on Campus',
+    text: 'Personal cars aren’t allowed on college premises during the event. Use public transport or carpool.',
+    points: [
+      'Personal cars and private 4-wheelers are prohibited on campus premises.',
+      'Please use metro, public transport, or carpooling to arrive.',
+      'Campus parking remains closed for attendee vehicles.',
+    ],
+    icon: 'CarFront',
+    accent: 'sun',
+  },
+  {
+    title: 'No Smoking or Alcohol',
+    text: 'Both are strictly prohibited on college premises. Anyone found engaging will be suspended from the event immediately.',
+    points: [
+      'Smoking, alcohol, and any prohibited substances are strictly banned.',
+      'Zero-tolerance policy will be strictly enforced across the campus.',
+      'Violators will be removed immediately from the event premises.',
+    ],
+    icon: 'CigaretteOff',
+    accent: 'burnt',
+  },
 ]
 // PLACEHOLDER descriptions: edit freely. No contact details are invented.
 export const CONTACT_PANELS = [
@@ -33,8 +92,6 @@ export const CONTACT_PANELS = [
 ]
 // Role and photo are PLACEHOLDERS (not supplied). Set img to a portrait in public/assets/img and add an instagram URL per person if wanted.
 export const PEOPLE = [
-  { name: 'Mantavya Mishra', role: 'Core team', phone: '80049 99099', img: '/assets/img/person-placeholder.svg', instagram: null },
-  { name: 'Parth Mishra', role: 'Core team', phone: '82659 73550', img: '/assets/img/person-placeholder.svg', instagram: null },
-  { name: 'Harsh Gupta', role: 'Core team', phone: '89576 73715', img: '/assets/img/person-placeholder.svg', instagram: null },
-  { name: 'Pranjal Sharma', role: 'Core team', phone: '88877 19341', img: '/assets/img/person-placeholder.svg', instagram: null },
+  { name: 'Ayan Khan', role: 'Core team', phone: '9140551042', img: '/assets/img/ayan-khan.jpg', instagram: null },
+  { name: 'Paras', role: 'Core team', phone: '7459097899', img: '/assets/img/paras.jpg', instagram: null },
 ]

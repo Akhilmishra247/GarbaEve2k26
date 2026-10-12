@@ -1,16 +1,30 @@
-import { ICONS, TONES } from './tones'
-
-export default function GuidelinePanel({ index, title, text, icon, tone }) {
-  const Icon = ICONS[icon]
+export default function GuidelinePanel({ index, title, text, isLast }) {
   return (
-    <li data-reveal className={`texture group relative flex flex-col justify-between gap-8 overflow-hidden rounded-2xl border-4 p-5 transition-transform duration-200 hover:-translate-y-2 sm:gap-10 sm:p-6 ${TONES[tone]}`}>
-      <div className="flex items-start justify-between">
-        <span className="font-display text-5xl opacity-70">{String(index + 1).padStart(2, '0')}</span>
-        {Icon && <Icon aria-hidden="true" className="h-12 w-12 transition-transform duration-300 group-hover:-rotate-12 group-hover:scale-110" />}
+    <li
+      data-reveal
+      className="group relative flex items-start gap-3.5 pb-4 last:pb-0 sm:gap-5 sm:pb-5"
+    >
+      {/* Left Column: Big Dot + Vertical Flowing Line */}
+      <div className="relative flex self-stretch flex-col items-center">
+        {/* Big Dot for Heading */}
+        <div className="relative z-10 mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full border-2 border-sun bg-plum shadow-[0_0_8px_rgba(255,201,60,0.4)] transition-transform duration-200 group-hover:scale-125 sm:h-5 sm:w-5">
+          <div className="h-1.5 w-1.5 rounded-full bg-sun sm:h-2 sm:w-2" />
+        </div>
+
+        {/* Vertical Flowing Line to the next dot */}
+        {!isLast && (
+          <div className="my-1 w-[2px] grow bg-gradient-to-b from-sun/50 via-sun/25 to-sun/10" />
+        )}
       </div>
-      <div>
-        <h3 className="font-display text-2xl uppercase leading-tight">{title}</h3>
-        <p className="mt-3 text-base opacity-80">{text}</p>
+
+      {/* Right Column: Heading and Details */}
+      <div className="flex-1">
+        <h3 className="font-body text-sm font-semibold tracking-wide text-sun sm:text-base">
+          {title}
+        </h3>
+        <p className="mt-0.5 font-body text-xs font-normal leading-relaxed text-bone/80 sm:mt-1 sm:text-sm">
+          {text}
+        </p>
       </div>
     </li>
   )
