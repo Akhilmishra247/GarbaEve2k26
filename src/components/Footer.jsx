@@ -63,9 +63,9 @@ export default function Footer() {
       </div>
 
       <div className="foot-in mx-auto flex max-w-screen-2xl flex-col gap-4 border-t border-bone/20 py-5 text-sm text-bone/60 sm:flex-row sm:items-center sm:justify-between">
-        <div className="flex items-center gap-3">
+        <div className="flex flex-wrap items-center gap-3">
           <img src="/assets/img/team-mmil-logo.png?v=2" alt="Microsoft Mobile Innovation Lab" className="h-10 w-auto object-contain" />
-          <p>Designed and Developed by Team MMIL</p>
+          <p className="text-xs sm:text-sm">Designed and Developed by Team MMIL</p>
         </div>
         <a href="#home" className="inline-flex w-fit items-center gap-2 font-bold uppercase tracking-widest text-sun transition-all duration-200 hover:-translate-y-1 hover:text-bone hover:[text-shadow:2px_2px_0_#ff5722]">
           Back to top<ArrowUp aria-hidden="true" className="h-4 w-4" />
