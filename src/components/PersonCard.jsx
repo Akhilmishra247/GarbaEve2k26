@@ -33,14 +33,14 @@ function Barcode({ seed }) {
   )
 }
 
-export default function PersonCard({ name, role, phone, img, imgPosition, instagram, email, linkedin, index = 0 }) {
+export default function PersonCard({ name, role, phone, img, imgPosition, instagram, email, linkedin, index = 0, passLabel = 'CORE TEAM PASS', className = '' }) {
   const iconCls = 'h-3.5 w-3.5 sm:h-4 sm:w-4 md:h-5 md:w-5'
   const linkCls = 'text-bone/70 hover:text-sun transition-colors'
 
   return (
     <li
       data-reveal
-      className="group relative flex h-full flex-col justify-between overflow-hidden rounded-xl border-2 border-white/15 bg-[#1f1317] text-bone shadow-[6px_8px_0_rgba(0,0,0,0.35)] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-sun/60 hover:shadow-[0_16px_36px_-8px_rgba(255,77,28,0.35),6px_8px_0_rgba(255,201,60,0.3)] md:rounded-2xl"
+      className={`group relative flex h-full flex-col justify-between overflow-hidden rounded-xl border-2 border-white/15 bg-[#1f1317] text-bone shadow-[6px_8px_0_rgba(0,0,0,0.35)] transition-all duration-300 ease-out hover:-translate-y-2 hover:border-sun/60 hover:shadow-[0_16px_36px_-8px_rgba(255,77,28,0.35),6px_8px_0_rgba(255,201,60,0.3)] md:rounded-2xl ${className}`}
     >
       {/* Holographic light shimmer sweep on hover */}
       <div
@@ -58,7 +58,7 @@ export default function PersonCard({ name, role, phone, img, imgPosition, instag
 
         {/* Header Pass Label */}
         <p className="mt-2 text-center text-[0.5rem] font-bold uppercase tracking-[0.22em] text-sun/85 transition-colors duration-300 group-hover:text-sun sm:mt-2.5 sm:text-[0.6rem] md:mt-3 md:text-xs md:tracking-[0.28em]">
-          CORE TEAM PASS
+          {passLabel}
         </p>
 
         {/* Avatar */}

@@ -95,3 +95,9 @@ export const PEOPLE = [
   { name: 'Paras', role: 'Core team', phone: '7459097899', img: '/assets/img/paras.jpg', imgPosition: 'center top', instagram: null },
   { name: 'Saksham Raghuvanshi', role: 'Core team', phone: '8318427726', img: '/assets/img/saksham-raghuvanshi.jpg', imgPosition: 'center 40%', instagram: null },
 ]
+
+export const SECURITY_PEOPLE = [
+  { name: 'Abhishek Vikram Singh', role: 'Security-Head', phone: '6393582281', img: '/assets/img/abhishek-vikram-singh.jpg', imgPosition: 'center 20%', instagram: null },
+]
+
+
