@@ -47,8 +47,8 @@ export default function ContactUs() {
       intro={`Reach out to any core team member below, or follow ${SITE.instagram.handle} on Instagram for announcements.`}
       className="bg-ink"
     >
-      <div className="mx-auto mt-8 w-full max-w-6xl sm:mt-12">
-        <ul className="grid grid-cols-2 gap-3.5 sm:gap-6 lg:grid-cols-4 lg:gap-6 items-stretch">
+      <div className="mx-auto mt-8 w-full max-w-5xl sm:mt-12">
+        <ul className="mx-auto grid max-w-xs grid-cols-1 gap-5 sm:max-w-5xl sm:grid-cols-3 sm:gap-6 lg:gap-8 items-stretch">
           {PEOPLE.map((p, index) => (
             <PersonCard key={p.name} index={index} {...p} />
           ))}

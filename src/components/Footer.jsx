@@ -16,17 +16,17 @@ export default function Footer() {
     <footer ref={ref} className="relative overflow-hidden border-t border-bone/15 bg-white/[0.03] px-4 pt-10 shadow-2xl backdrop-blur-xl md:px-10 md:pt-14">
       {/* Subtle ambient glass glow */}
       <div
-        className="pointer-events-none absolute -left-20 top-0 h-64 w-64 rounded-full bg-sun/10 blur-3xl"
+        className="pointer-events-none absolute -left-20 top-0 h-64 w-64 rounded-full bg-sun/5 blur-3xl"
         aria-hidden="true"
       />
       <div
-        className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-burnt/10 blur-3xl"
+        className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-burnt/5 blur-3xl"
         aria-hidden="true"
       />
 
       {/* Top subtle highlight */}
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-sun/40 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-sun/25 to-transparent"
         aria-hidden="true"
       />
 
@@ -44,7 +44,7 @@ export default function Footer() {
           <ul className="space-y-3">
             {NAV.map((n) => (
               <li key={n.id}>
-                <a href={`#${n.id}`} className="group inline-flex items-center gap-2 font-display text-lg uppercase text-burnt transition-colors hover:text-sun">
+                <a href={`#${n.id}`} className="group inline-flex items-center gap-2 font-display text-lg uppercase text-burnt/70 transition-colors hover:text-sun">
                   <span className="relative">
                     {n.label}
                     <span aria-hidden="true" className="absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 bg-sun transition-transform duration-200 group-hover:scale-x-100" />
@@ -58,7 +58,7 @@ export default function Footer() {
 
         <div>
           <h2 className="mb-4 font-display text-sm uppercase tracking-widest text-bone/50">Connect</h2>
-          <a href={SITE.instagram.href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 font-bold text-burnt transition-colors hover:text-sun">
+          <a href={SITE.instagram.href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 font-bold text-burnt/70 transition-colors hover:text-sun">
             <InstagramIcon className="h-5 w-5" />
             <span className="relative">
               {SITE.instagram.handle}

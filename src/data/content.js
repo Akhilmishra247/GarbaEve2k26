@@ -93,6 +93,5 @@ export const CONTACT_PANELS = [
 export const PEOPLE = [
   { name: 'Ayan Khan', role: 'Core team', phone: '9140551042', img: '/assets/img/ayan-khan.jpg', imgPosition: 'center top', instagram: null },
   { name: 'Paras', role: 'Core team', phone: '7459097899', img: '/assets/img/paras.jpg', imgPosition: 'center top', instagram: null },
-  { name: 'Manvendra Shahi', role: 'Core team', phone: '7905129199', img: '/assets/img/manvendra-shahi.jpg', imgPosition: 'center 58%', instagram: null },
   { name: 'Saksham Raghuvanshi', role: 'Core team', phone: '8318427726', img: '/assets/img/saksham-raghuvanshi.jpg', imgPosition: 'center 40%', instagram: null },
 ]
