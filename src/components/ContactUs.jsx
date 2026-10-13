@@ -46,6 +46,7 @@ export default function ContactUs() {
       align="center"
       intro={`Reach out to any core team member below, or follow ${SITE.instagram.handle} on Instagram for announcements.`}
       className="bg-ink"
+      sectionPadding="pt-16 pb-6 sm:pt-20 sm:pb-8 md:pt-32 md:pb-10"
     >
       <div className="mx-auto mt-8 w-full max-w-5xl sm:mt-12">
         <ul className="mx-auto grid max-w-xs grid-cols-1 gap-5 sm:max-w-5xl sm:grid-cols-3 sm:gap-6 lg:gap-8 items-stretch">
@@ -54,34 +55,17 @@ export default function ContactUs() {
           ))}
         </ul>
 
-        {/* Security Section */}
-        <div className="mt-14 sm:mt-20">
-          <div data-reveal className="flex flex-col items-center text-center">
-            <h3
-              className="font-display font-black uppercase leading-[0.9] tracking-tight text-3xl sm:text-5xl md:text-6xl"
-              style={{
-                backgroundImage:
-                  'linear-gradient(90deg, #ffd36e 0%, #fff4e0 28%, #ff8a3d 52%, #e0284a 72%, #f59a3a 100%)',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                color: 'transparent',
-              }}
-            >
-            </h3>
-          </div>
-
-          <ul className="mx-auto mt-6 grid max-w-xs grid-cols-1 sm:mt-8 sm:max-w-xs">
-            {SECURITY_PEOPLE.map((p, index) => (
-              <PersonCard
-                key={p.name}
-                index={PEOPLE.length + index}
-                passLabel="SECURITY PASS"
-                {...p}
-              />
-            ))}
-          </ul>
-        </div>
+        {/* Security Head */}
+        <ul className="mx-auto mt-5 grid max-w-xs grid-cols-1 sm:mt-6 lg:mt-8">
+          {SECURITY_PEOPLE.map((p, index) => (
+            <PersonCard
+              key={p.name}
+              index={PEOPLE.length + index}
+              passLabel="SECURITY PASS"
+              {...p}
+            />
+          ))}
+        </ul>
       </div>
     </Section>
   )

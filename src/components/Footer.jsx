@@ -13,7 +13,7 @@ export default function Footer() {
   const marqueeText = `${SITE.name} ✦ ONE NIGHT ✦ ENDLESS CIRCLES ✦`
 
   return (
-    <footer ref={ref} className="relative overflow-hidden border-t border-bone/15 bg-white/[0.03] px-4 pt-10 shadow-2xl backdrop-blur-xl md:px-10 md:pt-14">
+    <footer ref={ref} className="relative overflow-hidden border-t border-bone/15 bg-white/[0.03] px-4 pt-6 shadow-2xl backdrop-blur-xl sm:pt-8 md:px-10 md:pt-10">
       {/* Subtle ambient glass glow */}
       <div
         className="pointer-events-none absolute -left-20 top-0 h-64 w-64 rounded-full bg-sun/5 blur-3xl"

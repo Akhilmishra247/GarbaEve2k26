@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGsap } from '../hooks/useMotion'
 
 /** Section shell. Headings and every [data-reveal] child animate in progressively as they enter view. */
-export default function Section({ id, label, title, intro, children, className = '', align = 'left' }) {
+export default function Section({ id, label, title, intro, children, className = '', align = 'left', sectionPadding = 'py-16 sm:py-20 md:py-32' }) {
   const ref = useRef(null)
   useGsap(ref, (el) => {
     gsap.from(el.querySelector('h2'), { yPercent: 50, opacity: 0, duration: 0.9, ease: 'power4.out', scrollTrigger: { trigger: el, start: 'top 75%' } })
@@ -14,7 +14,7 @@ export default function Section({ id, label, title, intro, children, className =
   })
   const isCenter = align === 'center'
   return (
-    <section id={id} ref={ref} tabIndex={-1} className={`px-4 py-16 sm:px-6 sm:py-20 md:px-10 md:py-32 ${className}`}>
+    <section id={id} ref={ref} tabIndex={-1} className={`px-4 sm:px-6 md:px-10 ${sectionPadding} ${className}`}>
       <div className="mx-auto max-w-screen-2xl">
         <div className={isCenter ? 'flex flex-col items-center text-center' : ''}>
           <p className="inline-block rounded bg-sun px-3 py-1 font-display text-[0.65rem] uppercase tracking-widest text-ink sm:text-xs">{label}</p>
