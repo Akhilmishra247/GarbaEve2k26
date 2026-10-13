@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import gsap from 'gsap'
-import { ArrowRight, ArrowUp } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import InstagramIcon from './InstagramIcon'
 import { NAV, SITE } from '../data/content'
 import { useGsap } from '../hooks/useMotion'
@@ -13,8 +13,24 @@ export default function Footer() {
   const marqueeText = `${SITE.name} ✦ ONE NIGHT ✦ ENDLESS CIRCLES ✦`
 
   return (
-    <footer ref={ref} className="overflow-hidden bg-black px-4 pt-10 md:px-10 md:pt-14">
-      <div className="foot-in mx-auto grid max-w-screen-2xl grid-cols-1 gap-9 pb-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
+    <footer ref={ref} className="relative overflow-hidden border-t border-bone/15 bg-white/[0.03] px-4 pt-10 shadow-2xl backdrop-blur-xl md:px-10 md:pt-14">
+      {/* Subtle ambient glass glow */}
+      <div
+        className="pointer-events-none absolute -left-20 top-0 h-64 w-64 rounded-full bg-sun/10 blur-3xl"
+        aria-hidden="true"
+      />
+      <div
+        className="pointer-events-none absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-burnt/10 blur-3xl"
+        aria-hidden="true"
+      />
+
+      {/* Top subtle highlight */}
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-sun/40 to-transparent"
+        aria-hidden="true"
+      />
+
+      <div className="foot-in relative z-10 mx-auto grid max-w-screen-2xl grid-cols-1 gap-9 pb-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
         <div>
           <div className="flex items-center gap-4">
             <img src="/assets/img/logo-garba.webp" alt="Garba Eve logo" className="h-14 w-14 shrink-0 rounded-lg object-cover shadow-hardsm" />
@@ -42,8 +58,12 @@ export default function Footer() {
 
         <div>
           <h2 className="mb-4 font-display text-sm uppercase tracking-widest text-bone/50">Connect</h2>
-          <a href="https://instagram.com/jss_garba2k26?srtk=MWFodTRianFyZnh4dQ%3D%3D" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-bold text-sun transition-colors hover:text-burnt">
-            <InstagramIcon className="h-5 w-5" />{SITE.instagram.handle}
+          <a href={SITE.instagram.href} target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2 font-bold text-burnt transition-colors hover:text-sun">
+            <InstagramIcon className="h-5 w-5" />
+            <span className="relative">
+              {SITE.instagram.handle}
+              <span aria-hidden="true" className="absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 bg-sun transition-transform duration-200 group-hover:scale-x-100" />
+            </span>
           </a>
         </div>
       </div>
@@ -62,14 +82,11 @@ export default function Footer() {
         </div>
       </div> */}
 
-      <div className="foot-in mx-auto flex max-w-screen-2xl flex-col gap-4 border-t border-bone/20 py-5 text-sm text-bone/60 sm:flex-row sm:items-center sm:justify-between">
+      <div className="foot-in relative z-10 mx-auto flex max-w-screen-2xl items-center border-t border-bone/15 py-5 text-sm text-bone/60">
         <div className="flex flex-wrap items-center gap-3">
           <img src="/assets/img/team-mmil-logo.png?v=2" alt="Microsoft Mobile Innovation Lab" className="h-10 w-auto object-contain" />
           <p className="text-xs sm:text-sm">Designed and Developed by MMIL</p>
         </div>
-        <a href="#home" className="inline-flex w-fit items-center gap-2 font-bold uppercase tracking-widest text-sun transition-all duration-200 hover:-translate-y-1 hover:text-bone hover:[text-shadow:2px_2px_0_#ff5722]">
-          Back to top<ArrowUp aria-hidden="true" className="h-4 w-4" />
-        </a>
       </div>
     </footer>
   )

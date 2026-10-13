@@ -53,7 +53,7 @@ export default function Hero() {
     <section id="home" ref={root} tabIndex={-1} className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-4 pb-28 pt-28 text-center sm:pt-36 md:pt-32">
       <HeroVideo />
       <div className="hero-copy flex w-full flex-col items-center">
-        <p className="hero-eyebrow flex max-w-full items-center justify-center gap-2 font-display text-[0.65rem] uppercase tracking-[0.16em] text-bone/80 sm:gap-3 sm:text-xs sm:tracking-[0.22em] md:text-base md:tracking-ultra">
+        <p className="hero-eyebrow flex max-w-full flex-wrap items-center justify-center gap-2 text-center font-display text-[0.65rem] uppercase tracking-[0.16em] text-bone/80 sm:gap-3 sm:text-xs sm:tracking-[0.22em] md:text-base md:tracking-ultra">
           <span aria-hidden="true" className="inline-block h-3 w-3 shrink-0 rotate-45 bg-sun sm:h-4 sm:w-4" />{SITE.eyebrow}
         </p>
         <h1 aria-label={SITE.name} className="distress mt-6 w-full overflow-hidden bg-black py-2 font-display uppercase tracking-tight text-bone" style={{ fontSize: 'clamp(2rem, 10vw, 10rem)' }}>

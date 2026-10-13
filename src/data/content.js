@@ -2,7 +2,7 @@
 // Anything marked PLACEHOLDER has not been supplied: replace it before launch.
 export const SITE = {
   name: "GARBA-EVE'26",
-  eyebrow: 'JSS UNIVERSITY INVITES YOU TO',
+  eyebrow: 'JSS GROUP OF INSTITUTIONS NOIDA INVITES YOU TO',
   description: 'Dandiya in hand. Dhol in your chest. One night you’ll dance about for years.',
   tagline: 'One night. Endless circles. Every beat, your own story.',
   instagram: { handle: '@jss_garba2k26', href: 'https://instagram.com/jss_garba2k26?srtk=MWFodTRianFyZnh4dQ%3D%3D' },
@@ -90,8 +90,9 @@ export const CONTACT_PANELS = [
   { title: 'Event support', text: 'Need help on the day? The core team is available to resolve your questions quickly.', icon: 'LifeBuoy', tone: 'burnt' },
   { title: 'Partnerships', text: 'Interested in working with us? Get in touch through the core team or on Instagram.', icon: 'Handshake', tone: 'bone' },
 ]
-// Role and photo are PLACEHOLDERS (not supplied). Set img to a portrait in public/assets/img and add an instagram URL per person if wanted.
 export const PEOPLE = [
-  { name: 'Ayan Khan', role: 'Core team', phone: '9140551042', img: '/assets/img/ayan-khan.jpg', instagram: null },
-  { name: 'Paras', role: 'Core team', phone: '7459097899', img: '/assets/img/paras.jpg', instagram: null },
+  { name: 'Ayan Khan', role: 'Core team', phone: '9140551042', img: '/assets/img/ayan-khan.jpg', imgPosition: 'center top', instagram: null },
+  { name: 'Paras', role: 'Core team', phone: '7459097899', img: '/assets/img/paras.jpg', imgPosition: 'center top', instagram: null },
+  { name: 'Manvendra Shahi', role: 'Core team', phone: '7905129199', img: '/assets/img/manvendra-shahi.jpg', imgPosition: 'center 58%', instagram: null },
+  { name: 'Saksham Raghuvanshi', role: 'Core team', phone: '8318427726', img: '/assets/img/saksham-raghuvanshi.jpg', imgPosition: 'center 40%', instagram: null },
 ]
